@@ -16,7 +16,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        releaseconfig {
+            storeFile file('../InAppUpdateKeystore.jks')
+            storePassword 'Qwer1234'
+            keyAlias 'InAppUpdate'
+            keyPassword 'Qwer1234'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
